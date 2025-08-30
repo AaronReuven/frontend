@@ -1,4 +1,5 @@
 import { useState } from 'react'
+require('dotenv').config();
 
 export default function Home() {
   const [phone, setPhone] = useState('')
