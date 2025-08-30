@@ -1,5 +1,5 @@
 import { useState } from 'react'
-NEXT_PUBLIC_BACKEND_URL='https://backend-i7ds.onrender.com'
+const NEXT_PUBLIC_BACKEND_URL='https://backend-i7ds.onrender.com'
 
 export default function Home() {
   const [phone, setPhone] = useState('')
