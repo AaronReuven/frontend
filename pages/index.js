@@ -1,5 +1,5 @@
 import { useState } from 'react'
-require('dotenv').config();
+NEXT_PUBLIC_BACKEND_URL='https://backend-i7ds.onrender.com'
 
 export default function Home() {
   const [phone, setPhone] = useState('')
@@ -8,7 +8,7 @@ export default function Home() {
   async function callMe() {
     setStatus('Sending...')
     try {
-      const res = await fetch(process.env.NEXT_PUBLIC_BACKEND_URL + '/api/call', {
+      const res = await fetch(NEXT_PUBLIC_BACKEND_URL + '/api/call', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ phoneNumber: phone })
