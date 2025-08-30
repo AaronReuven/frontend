@@ -16,7 +16,7 @@ export default function Home() {
       if (res.ok) setStatus('Call initiated — ' + (j.message || 'ok'))
       else setStatus('Error: ' + (j.error || JSON.stringify(j)) )
     } catch (e) {
-      setStatus('Network error: ' + e.message + '  ---  ' + process.env.NEXT_PUBLIC_BACKEND_URL + '/api/call')
+      setStatus('Network error: ' + e.message)
     }
   }
 
